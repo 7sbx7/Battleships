@@ -5,13 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>BattleShips</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <div class="wrapper">
+
+        <div class="board-container board-container--user">
+            <p class="board-container__title">Player</p>
+            <div class="board board--user ships-container">
+
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="options">
+                <button class="options__start-btn btn">Start Game</button>
+                <button class="options__rotate-btn btn">Rotate</button>
+                <button class="options__again-btn btn">Play again</button>
+            </div>
+            <p class="round-display"></p>
+
+            <div class=" board--all-ships board--vertical ships-container">
+                <div class="ship quintuple-ship" id="quintuple-ship" draggable="true">
+                    <div class="ship__item ship__item--first" id="quintuple-ship__0"></div>
+                    <div class="ship__item " id="quintuple-ship__1"></div>
+                    <div class="ship__item " id="quintuple-ship__2"></div>
+                    <div class="ship__item " id="quintuple-ship__3"></div>
+                    <div class="ship__item ship__item--last" id="quintuple-ship__4"></div>
+                </div>
+                <div class="ship quadruple-ship" id="quadruple-ship" draggable="true">
+                    <div class="ship__item ship__item--first" id="quadruple-ship__0"></div>
+                    <div class="ship__item " id="quadruple-ship__1"></div>
+                    <div class="ship__item " id="quadruple-ship__2"></div>
+                    <div class="ship__item ship__item--last" id="quadruple-ship__3"></div>
+                </div>
+                <div class="ship tripple-ship" id="tripple-ship" draggable="true">
+                    <div class="ship__item ship__item--first" id="tripple-ship__0"></div>
+                    <div class="ship__item " id="tripple-ship__1"></div>
+                    <div class="ship__item ship__item--last" id="tripple-ship__2"></div>
+                </div>
+                <div class="ship double-ship" id="double-ship" draggable="true">
+                    <div class="ship__item ship__item--first" id="double-ship__0"></div>
+                    <div class="ship__item ship__item--last" id="double-ship__1"></div>
+                </div>
+                <div class="ship single-ship" id="single-ship" draggable="true">
+                    <div class="ship__item ship__item--single" id="single-ship__0"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="board-container board-container--computer">
+            <p class="board-container__title">Computer</p>
+            <div class="board board--computer ships-container">
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

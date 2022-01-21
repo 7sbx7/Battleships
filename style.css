@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #777;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  height: 80%;
+  width: 100%;
+  min-width: 950px;
+  min-height: 450px;
+}
+
+.controls,
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+}
+
+.btn {
+  width: 150px;
+  height: 30px;
+  margin: 5px;
+  background-color: #555;
+  border: 2px solid rgba(0, 0, 0, 0.247);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: rgb(231, 201, 166);
+  letter-spacing: 1px;
+  -webkit-box-shadow: 8px 8px 12px -5px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 8px 8px 12px -5px rgba(0, 0, 0, 0.61);
+  box-shadow: 8px 8px 12px -5px rgba(0, 0, 0, 0.61);
+}
+.round-display {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(231, 201, 166, 0.863);
+  font-weight: 800;
+}
+.board-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.board-container__title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: rgb(202, 195, 186);
+}
+
+.board {
+  min-width: 400;
+  min-height: 400;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.61);
+}
+.board--user {
+  background-color: rgb(38, 110, 69);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board--vertical {
+  display: flex;
+  flex-direction: column;
+}
+.board--horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.board--computer {
+  background-color: rgb(38, 110, 69);
+  display: flex;
+  flex-wrap: wrap;
+}
+.board__field {
+  width: 40px;
+  height: 40px;
+  box-shadow: inset 0px 0px 0px 1px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  /* border: 1px solid black; */
+}
+.board__field:hover {
+  /* background-color: rgba(30, 105, 105, 0.356); */
+  cursor: pointer;
+}
+
+.ship {
+  cursor: pointer;
+  display: flex;
+  margin: 10px 10px;
+  overflow: hidden;
+}
+.ship__item {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(97, 112, 97);
+}
+.ship__item--first {
+  border-radius: 50% 0 0 50%;
+}
+.ship__item--first-vertical {
+  border-radius: 50% 50% 0 0;
+}
+.ship__item--last {
+  border-radius: 0 50% 50% 0;
+}
+.ship__item--last-vertical {
+  border-radius: 0 0 50% 50%;
+}
+.ship__item--single {
+  border-radius: 50%;
+}
+.quintuple-ship {
+  width: 200px;
+  height: 40px;
+}
+.quintuple-ship--vertical {
+  flex-direction: column;
+  height: 200px;
+  width: 40px;
+}
+.quintuple-ship--vertical > .ship__item--first {
+  border-radius: 50% 50% 0 0;
+}
+.quintuple-ship--vertical > .ship__item--last {
+  border-radius: 0 0 50% 50%;
+}
+
+.quadruple-ship {
+  width: 160px;
+  height: 40px;
+}
+.quadruple-ship--vertical {
+  flex-direction: column;
+  height: 160px;
+  width: 40px;
+}
+.quadruple-ship--vertical > .ship__item--first {
+  border-radius: 50% 50% 0 0;
+}
+.quadruple-ship--vertical > .ship__item--last {
+  border-radius: 0 0 50% 50%;
+}
+
+.tripple-ship {
+  width: 120px;
+  height: 40px;
+}
+.tripple-ship--vertical {
+  flex-direction: column;
+  height: 120px;
+  width: 40px;
+}
+.tripple-ship--vertical > .ship__item--first {
+  border-radius: 50% 50% 0 0;
+}
+.tripple-ship--vertical > .ship__item--last {
+  border-radius: 0 0 50% 50%;
+}
+
+.double-ship {
+  width: 80px;
+  height: 40px;
+}
+.double-ship--vertical {
+  flex-direction: column;
+  height: 80px;
+  width: 40px;
+}
+
+.double-ship--vertical > .ship__item--first {
+  border-radius: 50% 50% 0 0;
+}
+.double-ship--vertical > .ship__item--last {
+  border-radius: 0 0 50% 50%;
+}
+
+.single-ship {
+  width: 40px;
+  height: 40px;
+}
+.single-ship--vertical {
+  flex-direction: column;
+  height: 40px;
+  width: 40px;
+}
+
+/* to see computer ships */
+.taken {
+  background-color: rgb(97, 112, 97);
+}
+.locked {
+  background-color: burlywood;
+}
+.shot {
+  background-color: rgb(177, 72, 72);
+}
+.miss {
+  background-color: rgb(45, 59, 51);
+}
+.sunk {
+  background-color: rgb(114, 0, 0);
+}
+
+.board--computer > .taken {
+  background-color: transparent;
+}
+.board--computer > .locked {
+  background-color: transparent;
+}
+.board--computer > .locked--visible {
+  background-color: burlywood;
+}
+.board--computer > .shot {
+  background-color: rgb(177, 72, 72);
+}
+.board--computer > .miss {
+  background-color: rgb(45, 59, 51);
+}
+.board--computer > .sunk {
+  background-color: rgb(114, 0, 0);
+}
